@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+app-root {
+    align-content: center;
+    align-items: center;
+}
+// var fonts
+
+$fontMontserat:'Montserrat', sans-serif;
+$fontRaleway: 'Raleway', sans-serif;
+$fontRibeye: 'Ribeye Marrow', cursive;
+
+#search {
+    font-family: $fontRaleway;
+}
+
+.phonenumber {
+    font-family: $fontMontserat;
+}
+
+.logotext {
+    font-family: $fontRaleway;
+}
+
+.authheader_text {
+    font-family: $fontRaleway;
+}
+
+.authheader_text_signin {
+    font-family: $fontRaleway;
+}
+
+.menu_item_name {
+    font-family: $fontRaleway;
+}

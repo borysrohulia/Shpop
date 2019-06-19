@@ -1,0 +1,106 @@
+<!-- top line -->
+
+<div class="topline">
+  <form class="searchform">
+    <input type="text" placeholder="search" id="search">
+    <label for="search" class="labelimage">
+      <img src="../../assets/img/search.svg">
+    </label>
+  </form>
+  <p class="phonenumber">+(380) 887 66 55</p>
+  <div class="languageflag"></div>
+  <div class="changelang"></div>
+</div>
+
+<!-- second line -->
+
+<div class="secondline">
+  <div class="logo headerlogo">
+    <img src="../../assets/img/lotus-1.svg">
+    <p class="logotext">● Green Lotus ● <br>STORE</p>
+  </div>
+  <div class="authheader">
+    <div class="maphide">
+      <img src="../../assets/img/mappoint.svg">
+      <p class="authheader_text">Find Your City</p>
+    </div>
+    <div class="verticalline"></div>
+    <div class="signin">
+      <p class="authheader_text_signin">Sign In</p>
+    </div>
+    <div class="verticalline"></div>
+    <div class="countgoods">
+      <img src="../../assets/img/heart.svg">
+      <img src="../../assets/img/shopping-basket.svg">
+    </div>
+  </div>
+</div>
+
+<!-- menu -->
+
+<div class="menu_container">
+  <div class="menu">
+    <div class="menu_item" id="tea" (mouseenter)='showTeaBlock()'>
+      <h3 class="menu_item_name">Tea</h3>
+    </div>
+    <div class="menu_item" id="coff">
+      <h3 class="menu_item_name">Coffee</h3>
+    </div>
+    <div class="menu_item" id="snack">
+      <h3 class="menu_item_name">Snack</h3>
+    </div>
+    <div class="menu_item" id="presents">
+      <h3 class="menu_item_name">Presents</h3>
+    </div>
+    <div class="menu_item" id="about">
+      <h3 class="menu_item_name">About Us</h3>
+    </div>
+    <div class="menu_item" id="reviews">
+      <h3 class="menu_item_name">Reviews</h3>
+    </div>
+    <div class="menu_item" id="contact">
+      <h3 class="menu_item_name">Contact Us</h3>
+    </div>
+    <div class="menu_item" id="delivery">
+      <h3 class="menu_item_name">Delivery</h3>
+    </div>
+  </div>
+</div>
+<div class="menu_content" id="tea_cont" *ngIf="showTea">
+  <div class="tea_content">
+    <div class="textside">
+      <div class="textside_left">
+        <a href="" class="menu_content_link">Green tea</a>
+        <a href="" class="menu_content_link">White tea</a>
+        <a href="" class="menu_content_link">Yellow tea</a>
+        <a href="" class="menu_content_link">Red tea</a>
+      </div>
+      <div class="textside_center">
+        <a href="" class="menu_content_link">Black tea</a>
+        <a href="" class="menu_content_link">Fruit tea</a>
+        <a href="" class="menu_content_link">Mint tea</a>
+        <a href="" class="menu_content_link">Herbal tea</a>
+      </div>
+      <div class="textside_right">
+        <a href="" class="menu_content_link">Oolong tea</a>
+        <a href="" class="menu_content_link">Kuding tea</a>
+        <a href="" class="menu_content_link">Puer tea</a>
+        <a href="" class="menu_content_link">Matcha tea</a>
+      </div>
+    </div>
+    <div class="imageside">
+      <img src="../../assets/img/coffee.svg">
+    </div>
+  </div>
+  <div class="abouttea">
+
+  </div>
+
+</div>
+<!-- <div class="menu_content" id="coff_cont"></div>
+<div class="menu_content" id="snack_cont"></div>
+<div class="menu_content" id="pres_cont"></div>
+<div class="menu_content" id="about_cont"></div>
+<div class="menu_content" id="revi_cont"></div>
+<div class="menu_content" id="cont_cont"></div>
+<div class="menu_content" id="deliv_cont"></div> -->

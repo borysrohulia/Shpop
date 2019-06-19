@@ -1,0 +1,181 @@
+// style for topline
+
+.topline {
+    background: rgba(83, 117, 95, 0.99);
+    display: flex;
+    height: 32px; 
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    .searchform {
+        display: flex;
+        margin-left: 1087px;
+        width: 135px;
+        height: 20px;
+        margin-right: 34px;
+        #search {
+            border: none;
+            border-bottom: 0.25px solid rgba(236, 255, 247, 0.5);
+            background: transparent;
+            width: 110px;
+            color: rgba(236, 255, 247, 0.5);
+            &::placeholder {
+                background: transparent;
+                border: none;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: rgba(236, 255, 247, 0.5);
+            }
+        }
+        .labelimage:hover {
+            opacity: 0.7;
+        }
+    }
+    .phonenumber {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ECFFF7;
+        margin-right: 29px;
+    }
+    .languageflag {
+        width: 20px;
+        height: 20px;
+        background-image: url('../../assets/img/flag.png');
+        background-size: cover;
+        margin-right: 5px;
+    }
+    .changelang {
+        background-image: url('../../assets/img/down.svg');
+        background-size: cover;
+        width: 6px;
+        height: 6px;
+        margin-top: 14px;
+    }
+}
+
+// logo style
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    .logotext {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #544D40;
+        margin-top: 3px;
+    }
+}
+
+// style for secondline
+
+.secondline {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    .headerlogo {
+        margin-left: 467px;
+        margin-right: 521px;
+    }
+    .authheader {
+        display: flex;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        .maphide {
+            display: flex;
+            margin-right: 15px;
+            align-content: center;
+            align-items: center;
+            .authheader_text {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                color: #3F3B35;
+            }
+        }
+        .verticalline {
+            width: 16px;
+            height: 0px;
+            border: 0.5px solid #D1CDCD;
+            transform: rotate(90deg);
+        }
+        .signin {
+            margin-right: 15px;
+            margin-left: 15px;
+            align-content: center;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            .authheader_text_signin {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                color: #3F3B35;
+            }
+        }
+        .countgoods {
+            margin-left: 15px;
+        }
+    }
+}
+
+// style for menu
+
+.menu_container {
+    display: flex;
+    // justify-content: center;
+    .menu {
+        display: flex;
+        margin-left: 438px;
+        &:first-child {
+            margin-right: 0px;
+        }
+        &_item {
+            // margin-right: 58px;
+            padding: 10px 29px 15px 29px;
+            &:hover {
+                background-color: #404445;
+            }
+            &:hover .menu_item_name {
+                color: #FFF;
+            }
+            &_name {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+                letter-spacing: 0.06em;
+                color: #3F3B35;
+            }
+        }
+    }
+}
+
+.menu_content {
+    // display: none;
+    position: absolute;
+    margin-left: 390px;
+    width: 1140px;
+    background: #404445;
+    height: 304px;
+}
+
+// #tea_cont {
+//     display: block;
+// }
