@@ -147,6 +147,8 @@
         }
         &_item {
             // margin-right: 58px;
+            // position: relative;
+            height: 50px;
             padding: 10px 29px 15px 29px;
             &:hover {
                 background-color: #404445;
@@ -170,10 +172,51 @@
 .menu_content {
     // display: none;
     position: absolute;
-    margin-left: 390px;
+    // margin-left: 390px;
+    top: 175px;
+    left: 390px;
     width: 1140px;
-    background: #404445;
     height: 304px;
+    background: #404445;
+    padding-left: 77px;
+    padding-right: 77px;
+    padding-top: 40px;
+    .tea_content {
+        display: flex;
+        border-bottom: solid 0.25px #FFF;
+        padding-bottom: 40px;
+        .textside {
+            display: flex;
+            flex-wrap: wrap;
+            width: 406px;
+            height: 106px;
+            justify-content: space-between;
+            margin-right: 409px;
+            &_block {
+                display: flex;
+                flex-direction: column;
+                .menu_content_link {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #ECFFF7;
+                    text-decoration: none;
+                    margin-bottom: 10px;
+                    &:visited {
+                        text-decoration: none;
+                        color: #ECFFF7;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }           
+                }
+            }
+        }
+        .imageside {
+            margin-top: 31px;
+        }
+    }
 }
 
 // #tea_cont {

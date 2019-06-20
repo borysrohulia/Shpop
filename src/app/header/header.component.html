@@ -40,11 +40,45 @@
 
 <div class="menu_container">
   <div class="menu">
-    <div class="menu_item" id="tea" (mouseenter)='showTeaBlock()'>
+    <div class="menu_item" id="tea" (mouseenter)='showTeaBlock()' (mouseleave)='showTeaBlock()'>
       <h3 class="menu_item_name">Tea</h3>
+      <div class="menu_content" id="tea_cont" *ngIf="showTea">
+        <div class="tea_content">
+          <div class="textside">
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Green tea</a>
+              <a href="" class="menu_content_link">White tea</a>
+              <a href="" class="menu_content_link">Yellow tea</a>
+              <a href="" class="menu_content_link">Red tea</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Black tea</a>
+              <a href="" class="menu_content_link">Fruit tea</a>
+              <a href="" class="menu_content_link">Mint tea</a>
+              <a href="" class="menu_content_link">Herbal tea</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Oolong tea</a>
+              <a href="" class="menu_content_link">Kuding tea</a>
+              <a href="" class="menu_content_link">Puer tea</a>
+              <a href="" class="menu_content_link">Matcha tea</a>
+            </div>
+          </div>
+          <div class="imageside">
+            <img src="../../assets/img/coffee.svg">
+          </div>
+        </div>
+        <div class="abouttea">
+      
+        </div>
+      
+      </div>
     </div>
-    <div class="menu_item" id="coff">
+    <div class="menu_item" id="coff" (mouseenter)='showCoffeeBlock()' (mouseleave)='showCoffeeBlock()'>
       <h3 class="menu_item_name">Coffee</h3>
+      <div class="menu_content" id="coff_cont" *ngIf='showCoffee'>
+        <h1 style="color: white">COFFEEEEEEE!!!!!!!!!!!!!!!!W</h1>
+      </div>
     </div>
     <div class="menu_item" id="snack">
       <h3 class="menu_item_name">Snack</h3>
@@ -66,7 +100,7 @@
     </div>
   </div>
 </div>
-<div class="menu_content" id="tea_cont" *ngIf="showTea">
+<!-- <div class="menu_content" id="tea_cont" *ngIf="showTea" (mouseleave)='showTeaBlock()'>
   <div class="tea_content">
     <div class="textside">
       <div class="textside_left">
@@ -96,9 +130,13 @@
 
   </div>
 
-</div>
-<!-- <div class="menu_content" id="coff_cont"></div>
-<div class="menu_content" id="snack_cont"></div>
+</div> -->
+
+<!-- <div class="menu_content" id="coff_cont" *ngIf='showCoffee' (mouseleave)='showCoffeeBlock()'>
+  <h1 style="color: white">COFFEEEEEEE!!!!!!!!!!!!!!!!W</h1>
+</div> -->
+
+<!-- <div class="menu_content" id="snack_cont"></div>
 <div class="menu_content" id="pres_cont"></div>
 <div class="menu_content" id="about_cont"></div>
 <div class="menu_content" id="revi_cont"></div>
