@@ -1,0 +1,43 @@
+.banner {
+    background-image: url('../../assets/img/Group.png');
+    background-size: cover;
+    display: flex;
+    height: 400px;
+    margin: 0px;
+    // justify-content: center;
+    // padding-left: 410px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+    .leftarrow {
+        margin-left: 410px;
+        margin-right: 514px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin-right: 130px;
+        &-headtext {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 34px;
+            line-height: 46px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #68263D;
+            margin-bottom: 10px;
+        }
+        &-text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #3F3B35;
+            margin-bottom: 79px;
+        }
+    }
+}

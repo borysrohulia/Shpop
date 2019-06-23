@@ -43,7 +43,7 @@ $fontRibeye: 'Ribeye Marrow', cursive;
     font-family: $fontRaleway;
 }
 
-.abouttea_text {
+.aboutgood_text {
     font-family: $fontRaleway;
 }
 
@@ -65,4 +65,51 @@ $fontRibeye: 'Ribeye Marrow', cursive;
 
 .email {
     font-family: $fontRaleway;
+}
+
+// logo style
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    .logotext {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #544D40;
+        margin-top: 3px;
+    }
+}
+
+.content-headtext {
+    font-family: $fontRibeye;
+}
+
+.content-text {
+    font-family: $fontRaleway;
+}
+
+.butt {
+    width: 213px;
+    height: 38px;
+    background-color: rgb(72, 116, 0);
+    border: 0.5px solid #2B2A2A;
+    // box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #2B2A2A;
+    text-transform: uppercase;
+    font-family: $fontRaleway;
+    &:hover {
+        opacity: 0.7;
+    }
 }

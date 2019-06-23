@@ -59,21 +59,7 @@
 
 // logo style
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    .logotext {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-        color: #544D40;
-        margin-top: 3px;
-    }
-}
+
 
 // style for secondline
 
@@ -208,8 +194,8 @@
         text-align: center;
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: 196px;
-        margin-right: 196px;
+        // margin-left: 196px;
+        // margin-right: 196px;
         // width: 749px;
         &_text {
             font-style: normal;

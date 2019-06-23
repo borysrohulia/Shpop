@@ -86,3 +86,32 @@
         }
     }
 }
+
+.line {
+    border: solid 1px white;
+}
+
+.down-container {
+    background-color: #7A8C7B;
+    padding-left: 563px;
+    padding-top: 49px;
+    padding-bottom: 20px;
+    display: flex;
+    .icons {
+        display: flex;
+        margin-right: 440px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        .icon {
+            margin-right: 18px;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.footer_logotext {
+    color: white;
+}
