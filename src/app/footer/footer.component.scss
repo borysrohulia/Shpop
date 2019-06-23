@@ -1,0 +1,88 @@
+.up-container {
+    background-color: #53755F;
+    padding-left: 550px;
+    padding-top: 31px;
+    padding-bottom: 40px;
+    display: flex;
+    .leftside {
+        display: flex;
+        margin-right: 256px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            margin-right: 58px;
+            &_headtext {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                color: #ECFFF7;
+                margin-bottom: 15px;
+            }
+            &_text {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                color: #ECFFF7;
+                margin-bottom: 5px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .rightside {
+        display: flex;
+        flex-direction: column;
+        .column_headtext {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ECFFF7;
+            margin-bottom: 22px;
+        }
+        .hour {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 10px;
+            color: #ECFFF7;
+            .imgphonenumber {
+                margin-right: 15px;
+            }
+        }
+        .phonenumber {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ECFFF7;
+            margin-right: 29px;
+            margin-bottom: 30px;
+        }
+        .emailicon {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #ECFFF7;
+            margin-bottom: 10px;
+            .imgemailicon {
+                margin-right: 15px;
+            }
+        }
+        .email {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            color: #ECFFF7;;
+        }
+    }
+}

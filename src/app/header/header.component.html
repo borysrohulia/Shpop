@@ -43,7 +43,7 @@
     <div class="menu_item" id="tea" (mouseenter)='showTeaBlock()' (mouseleave)='showTeaBlock()'>
       <h3 class="menu_item_name">Tea</h3>
       <div class="menu_content" id="tea_cont" *ngIf="showTea">
-        <div class="tea_content">
+        <div class="good_content">
           <div class="textside">
             <div class="textside_block">
               <a href="" class="menu_content_link">Green tea</a>
@@ -65,26 +65,107 @@
             </div>
           </div>
           <div class="imageside">
-            <img src="../../assets/img/coffee.svg">
+            <img src="../../assets/img/tea.svg">
           </div>
         </div>
-        <div class="abouttea">
-      
+        <div class="aboutgood">
+          <p class="aboutgood_text">Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over
+            cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to East Asia.</p>
         </div>
-      
+
       </div>
     </div>
     <div class="menu_item" id="coff" (mouseenter)='showCoffeeBlock()' (mouseleave)='showCoffeeBlock()'>
       <h3 class="menu_item_name">Coffee</h3>
-      <div class="menu_content" id="coff_cont" *ngIf='showCoffee'>
-        <h1 style="color: white">COFFEEEEEEE!!!!!!!!!!!!!!!!W</h1>
+      <div class="menu_content" id="coff_cont" *ngIf="showCoffee">
+        <div class="good_content">
+          <div class="textside">
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Whole bean coffee</a>
+              <a href="" class="menu_content_link">Ground coffee</a>
+              <a href="" class="menu_content_link">Instant coffee</a>
+              <a href="" class="menu_content_link">Specialty coffee</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Decaf coffee</a>
+              <a href="" class="menu_content_link">Freshly roasted coffee</a>
+              <a href="" class="menu_content_link">Coffee capsules</a>
+            </div>
+          </div>
+          <div class="imageside">
+            <img src="../../assets/img/coffee.svg">
+          </div>
+        </div>
+        <div class="aboutgood">
+          <p class="aboutgood_text">Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over
+            cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to East Asia.</p>
+        </div>
+
       </div>
     </div>
-    <div class="menu_item" id="snack">
+    <div class="menu_item" id="snack" (mouseenter)='showSnackBlock()' (mouseleave)='showSnackBlock()'>
       <h3 class="menu_item_name">Snack</h3>
+      <div class="menu_content" id="coff_cont" *ngIf="showSnack">
+        <div class="good_content">
+          <div class="textside">
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Cookies</a>
+              <a href="" class="menu_content_link">Biscuits</a>
+              <a href="" class="menu_content_link">Cheesecake</a>
+              <a href="" class="menu_content_link">Pie</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Cupcakes</a>
+              <a href="" class="menu_content_link">Donuts</a>
+              <a href="" class="menu_content_link">Cakes</a>
+              <a href="" class="menu_content_link">Pudding</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Croissant</a>
+            </div>
+          </div>
+          <div class="imageside">
+            <img src="../../assets/img/snack.svg">
+          </div>
+        </div>
+        <div class="aboutgood">
+          <p class="aboutgood_text">A snack is a small service of food and generally eaten between meals. Snacks come in
+            a variety of forms including packaged snack foods and other processed foods, as well as items made from
+            fresh ingredients at home.</p>
+        </div>
+
+      </div>
     </div>
-    <div class="menu_item" id="presents">
+    <div class="menu_item" id="presents" (mouseenter)='showPresentBlock()' (mouseleave)='showPresentBlock()'>
       <h3 class="menu_item_name">Presents</h3>
+      <div class="menu_content" id="coff_cont" *ngIf="showPresent">
+        <div class="good_content">
+          <div class="textside">
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Thanksgiving Day</a>
+              <a href="" class="menu_content_link">Christmas</a>
+              <a href="" class="menu_content_link">New Year</a>
+              <a href="" class="menu_content_link">Valentines Day</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Mother's Day</a>
+              <a href="" class="menu_content_link">Father's Day</a>
+              <a href="" class="menu_content_link">Easter</a>
+              <a href="" class="menu_content_link">Wedding Day</a>
+            </div>
+            <div class="textside_block">
+              <a href="" class="menu_content_link">Birthday</a>
+            </div>
+          </div>
+          <div class="imageside">
+            <img src="../../assets/img/present.svg">
+          </div>
+        </div>
+        <div class="aboutgood">
+          <p class="aboutgood_text"> We love our customers so much, that`s why from time to time we make a present of
+            some tasty and sweet to you. Also we can pack a gift for your friends and family for any celebration.</p>
+        </div>
+      </div>
     </div>
     <div class="menu_item" id="about">
       <h3 class="menu_item_name">About Us</h3>
@@ -100,45 +181,5 @@
     </div>
   </div>
 </div>
-<!-- <div class="menu_content" id="tea_cont" *ngIf="showTea" (mouseleave)='showTeaBlock()'>
-  <div class="tea_content">
-    <div class="textside">
-      <div class="textside_left">
-        <a href="" class="menu_content_link">Green tea</a>
-        <a href="" class="menu_content_link">White tea</a>
-        <a href="" class="menu_content_link">Yellow tea</a>
-        <a href="" class="menu_content_link">Red tea</a>
-      </div>
-      <div class="textside_center">
-        <a href="" class="menu_content_link">Black tea</a>
-        <a href="" class="menu_content_link">Fruit tea</a>
-        <a href="" class="menu_content_link">Mint tea</a>
-        <a href="" class="menu_content_link">Herbal tea</a>
-      </div>
-      <div class="textside_right">
-        <a href="" class="menu_content_link">Oolong tea</a>
-        <a href="" class="menu_content_link">Kuding tea</a>
-        <a href="" class="menu_content_link">Puer tea</a>
-        <a href="" class="menu_content_link">Matcha tea</a>
-      </div>
-    </div>
-    <div class="imageside">
-      <img src="../../assets/img/coffee.svg">
-    </div>
-  </div>
-  <div class="abouttea">
 
-  </div>
-
-</div> -->
-
-<!-- <div class="menu_content" id="coff_cont" *ngIf='showCoffee' (mouseleave)='showCoffeeBlock()'>
-  <h1 style="color: white">COFFEEEEEEE!!!!!!!!!!!!!!!!W</h1>
-</div> -->
-
-<!-- <div class="menu_content" id="snack_cont"></div>
-<div class="menu_content" id="pres_cont"></div>
-<div class="menu_content" id="about_cont"></div>
-<div class="menu_content" id="revi_cont"></div>
-<div class="menu_content" id="cont_cont"></div>
-<div class="menu_content" id="deliv_cont"></div> -->
+<!-- about and delivery -->

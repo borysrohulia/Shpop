@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   showAbout: boolean = false;
   showReviews: boolean = false;
   showLang: boolean = false;
-  i: number;
 
   showTeaBlock() {
     this.showTea = !this.showTea;
@@ -22,6 +21,14 @@ export class HeaderComponent implements OnInit {
 
   showCoffeeBlock() {
     this.showCoffee = !this.showCoffee;
+  }
+
+  showSnackBlock() {
+    this.showSnack = !this.showSnack;
+  }
+  
+  showPresentBlock() {
+    this.showPresent = !this.showPresent;
   }
 
   constructor() { }
