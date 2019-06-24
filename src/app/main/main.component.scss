@@ -4,6 +4,7 @@
     display: flex;
     height: 400px;
     margin: 0px;
+    margin-bottom: 80px;
     // justify-content: center;
     // padding-left: 410px;
     padding-top: 85px;
@@ -38,6 +39,97 @@
             text-align: center;
             color: #3F3B35;
             margin-bottom: 79px;
+        }
+    }
+}
+
+.container-imageproducts {
+    display: flex;
+    justify-content: center;
+    .imageproducts {
+        display: flex;
+        margin-bottom: 80px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-right: 110px;
+            .imageofproduct {
+                box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
+                margin-bottom: 15px;
+                border-radius: 5px;
+            }
+            .nameproduct {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+                letter-spacing: 0.06em;
+                color: #3F3B35;
+            }
+        }
+    }
+}
+
+.container-aboutus {
+    background-image: url('../../assets/img/MaskGroup.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    .aboutuscontent {
+        display: flex;
+        .textside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 77px;
+            .aboutusheadtext {
+                margin-top: 10px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                margin-bottom: 40px;
+                text-align: center;
+                letter-spacing: 0.06em;
+                color: #33402F;
+                text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+            }
+            .aboutustext {
+                font-style: normal;
+                font-weight: normal;
+                width: 410px;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: justify;
+                text-indent: 8px;
+                color: #3F3B35;
+            }
+            .aboutusline {
+                width: 40px;
+                border: 0.5px solid #D1CDCD;
+                margin-bottom: 10px;
+            }
+        }
+        .imageside {
+            margin-top: 21px;
+            background-color: #53755F;
+            border-radius: 8px;
+            position: relative;
+            z-index: 0;
+            .imgaboutus {
+                border-radius: 8px;
+                position: relative;
+                top: 23px;
+                left: -39px;
+                z-index: 1;
+            }
         }
     }
 }
