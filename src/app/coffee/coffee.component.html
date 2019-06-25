@@ -1,0 +1,12 @@
+<div class="mainbanner"></div>
+<div class="sidecartcoffee">
+
+    <div class="cartofcoffe" *ngFor='let coffee of coffees'>
+        <img class="iamgeofcoffee" [src]='coffee.image' [routerLink]="[ '/coffeecart',coffee.id]">
+        <h3 class="nameofcoffee">{{coffee.name}}</h3>
+        <p class="beentype">{{coffee.been}}</p>
+        <p class="color">{{coffee.color}}</p>
+        <p class="type">{{coffee.type}}</p>
+        <p class="country">{{coffee.country}}</p>
+    </div>
+</div>

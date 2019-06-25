@@ -1,0 +1,19 @@
+.mainbanner {
+    height: 235px;
+    background-image: url('../../assets/img/bannercoffeepage.png');
+    margin-bottom: 80px;
+}
+
+
+.sidecartcoffee {
+    display: flex;
+    flex-wrap: wrap;
+    .cartofcoffe {
+        display: flex;
+        flex-direction: column;
+        .iamgeofcoffee {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

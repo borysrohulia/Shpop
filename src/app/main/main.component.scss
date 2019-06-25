@@ -133,3 +133,112 @@
         }
     }
 }
+
+.container_coffee {
+    height: 400px;
+    background-image: url('../../assets/img/coffeebanner.png');
+    margin-top: 27px;
+    // padding-left: 694px;
+    padding-top: 265px;
+    margin-bottom: 130px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35), 0px -3px 10px rgba(0, 0, 0, 0.3);
+    .content-container_coffee {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        .coffeebanertext {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 34px;
+            line-height: 46px;
+            color: #493026;
+            margin-bottom: 30px;
+        }
+        // .butt-bannercoffee {
+        //     background: transparent;
+        // }
+    }
+}
+
+.lastbanneronmainpage {
+    background-image: url('../../assets/img/lastbanner.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin-top: 133px;
+    padding-bottom: 21px;
+    margin-bottom: 80px;
+    .contentlastbanner {
+        display: flex;
+        .textsidelast {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            margin-right: 77px;
+            .nametext {
+                margin-bottom: 40px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+                letter-spacing: 0.06em;
+                color: #33402F;
+                text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+            }
+            .centertext {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            .line {
+                margin-bottom: 10px;
+                width: 40px;
+                border-bottom: 1px solid #D1CDCD;
+                margin-left: 230px;
+            }
+            .contentext {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: justify;
+                text-indent: 8px;
+                margin-bottom: 10px;
+                color: #3F3B35;
+                .underline {
+                    text-decoration: underline;
+                }
+            }
+            #lastcontenttext {
+                margin-bottom: 35px;
+            }
+            .priceline {
+                display: flex;
+                align-items: center;
+                // justify-content: center;
+                .price {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-align: center;
+                    color: #33402F;
+                    margin-right: 80px;
+                }
+                .butt_price {
+                    // background: transparent;
+                    margin-right: 21px;
+                }
+            }
+        }
+        .imagesidelast {
+            background-image: url('../../assets/img/Pic_inprice.png');
+            background-size: cover;
+            width: 406.61px;
+            height: 330px;
+        }
+    }
+}

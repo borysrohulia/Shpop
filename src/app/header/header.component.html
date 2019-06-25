@@ -15,7 +15,7 @@
 <!-- second line -->
 
 <div class="secondline">
-  <div class="logo headerlogo">
+  <div class="logo headerlogo" [routerLink]="''">
     <img src="../../assets/img/lotus-1.svg">
     <p class="logotext">● Green Lotus ● <br>STORE</p>
   </div>
@@ -76,7 +76,7 @@
       </div>
     </div>
     <div class="menu_item" id="coff" (mouseenter)='showCoffeeBlock()' (mouseleave)='showCoffeeBlock()'>
-      <h3 class="menu_item_name">Coffee</h3>
+      <h3 class="menu_item_name" [routerLink]="'coffee'">Coffee</h3>
       <div class="menu_content" id="coff_cont" *ngIf="showCoffee">
         <div class="good_content">
           <div class="textside">
