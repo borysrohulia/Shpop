@@ -4,16 +4,149 @@
     margin-bottom: 80px;
 }
 
-
-.sidecartcoffee {
+.navline {
     display: flex;
     flex-wrap: wrap;
-    .cartofcoffe {
+    align-items: center;
+    border-bottom: solid #D1CDCD 1px;
+    margin-left: 390px;
+    margin-bottom: 25px;
+    padding-left: 77px;
+    padding-bottom: 40px;
+    &-value {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #3F3B35;
+        margin-right: 17px;
+    }
+    .ellipse {
+        height: 4px;
+        width: 4px;
+        background: #544D40;
+        border-radius: 100%;
+        margin-right: 17px;
+    }
+    .navline-view {
+        margin-left: 550px;
+        margin-right: 35px;
+    }
+    .viewimage {
+        margin-right: 15px;
+    }
+}
+
+.maincontent {
+    display: flex;
+    padding-left: 467px;
+    .sidebar {
         display: flex;
         flex-direction: column;
-        .iamgeofcoffee {
-            width: 150px;
-            height: 150px;
+        width: 213px;
+        .headsidebar {
+            padding: 20px;
+            border-bottom:  0.5px solid #D1CDCD;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #33402F;
+        }
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 0.5px solid #D1CDCD;
+            .headcategory {
+                display: flex;
+                padding: 20px;
+                position: relative;
+                width: 213px;
+                &-name {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #33402F;
+                }
+                .plusminus {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 100%;
+                    border: solid 1px black;
+                    position: absolute;
+                    left: 173px;
+                    
+                    .minus {
+                        width: 9px;
+                        border-bottom: solid 1px black;
+                        position: absolute;
+                        bottom: 8px;
+                        right: 3px;
+                    }
+                    .plus {
+                        width: 9px;
+                        border-bottom: solid 1px black;
+                        transform: rotate(90deg);
+                        position: absolute;
+                        left: 3px;
+                        bottom: 8px;
+                    }
+                }
+            }
+            .choosen {
+                width: 213px;
+                padding-left: 20px;
+                padding-bottom: 20px;
+
+                .choosecoffee {
+                    width: 213px;
+                    margin-bottom: 15px;
+                    .checkbox {
+                        margin-right: 11px;
+                    }
+                    .nameofchoose {
+                        // font-family: $fontRaleway;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #33402F;
+                        // display: flex;
+                        // flex-wrap: wrap;s
+                    }
+                }
+            }
+        }
+    }
+    .sidecartcoffee {
+        display: flex;
+        flex-wrap: wrap;
+        .cartofcoffe {
+            display: flex;
+            flex-direction: column;
+            .iamgeofcoffee {
+                width: 150px;
+                height: 150px;
+            }
         }
     }
 }
+
+// .checkbox {
+//     display: none;
+// }
+
+.label::before {
+    content: ' ';
+    display: inline-block;
+    margin-right: 11px;
+    background: transparent ;
+    border: 1px solid #D1CDCD;
+    border-radius: 8px;
+    width: 20px;
+    height: 20px;
+    border-image: initial;
+}
+

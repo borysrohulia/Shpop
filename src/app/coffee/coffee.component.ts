@@ -1,49 +1,66 @@
 import { Component, OnInit } from '@angular/core';
+import { AllcoffeeService } from '../allcoffee.service';
 
 @Component({
   selector: 'app-coffee',
   templateUrl: './coffee.component.html',
-  styleUrls: ['./coffee.component.scss']
+  styleUrls: ['./coffee.component.scss'],
+  providers: [AllcoffeeService]
 })
 export class CoffeeComponent implements OnInit {
 
-  coffees: any [] = [
-    {
-      id: 1,
-      image: '../../assets/img/coffeecup.png',
-      name: 'Espresso Wiener Art',
-      been: 'whole',
-      color: 'brown',
-      type: 'robusta',
-      country: 'brazillllll',
-      price: '20$',
-    }, 
-    {
-      id: 2,
-      image: '../../assets/img/coffebeen.png',
-      name: 'Espresso Art',
-      been: 'whole',
-      color: 'dark',
-      type: 'arabica',
-      country: 'brazil',
-      price: '50$',
-    }, 
+  formats: any [] = [
+    'Whole-bean', 'Ground', 'Instant', 'Specialty', 'Decaf', 'Freshly-roasted', 'Capsules'
+  ];
 
-    {
-      id: 3,
-      image: '../../assets/img/coffeecup.png',
-      name: 'Espresso Wiener',
-      been: 'whole',
-      color: 'brown',
-      type: 'robusta',
-      country: 'brazillllll',
-      price: '20$',
-    }
+  roastingDegrees: any [] = [
+    'Light', 'Medium', 'Dark'
+  ];
+
+  coffeeType = [
+    'Arabica 100%', 'Robusta 100%', 'Arabica 90% Robusta 10%', 'Arabica 80% Robusta 20%',
+    'Arabica 70% Robusta 30%', 'Arabica 60% Robusta 40%', 'Arabica 50% Robusta 50%', 'Arabica 30% Robusta 70%',
+    'Arabica 20% Robusta 80%'
+  ];
+
+  producingCountryes = [
+    'Brazil', 'Colombia', 'Ethiopia', 'Guatemala'
+  ];
+
+  offers = [
+    'New', 'Sale'
   ]
 
-  constructor() { }
+  statusFormat: boolean = false;
+  statusDegree: boolean = false;
+  statusType: boolean = false;
+  statusCountry: boolean = false;
+  statusOffer: boolean = false;
+  coffees;
+
+  constructor(private allCoffee: AllcoffeeService) { }
 
   ngOnInit() {
+    this.coffees = this.allCoffee.getCoffees();
   }
 
+  showFormat() {
+    this.statusFormat = !this.statusFormat;
+  }
+
+  showDegree() {
+    this.statusDegree = !this.statusDegree;
+  }
+
+  showType() {
+    this.statusType = !this.statusType;
+  }
+
+  showCountry() {
+    this.statusCountry = !this.statusCountry;
+  }
+
+  showOffer() {
+    this.statusOffer = !this.statusOffer;
+  }
 }

@@ -1,12 +1,114 @@
 <div class="mainbanner"></div>
-<div class="sidecartcoffee">
 
-    <div class="cartofcoffe" *ngFor='let coffee of coffees'>
-        <img class="iamgeofcoffee" [src]='coffee.image' [routerLink]="[ '/coffeecart',coffee.id]">
-        <h3 class="nameofcoffee">{{coffee.name}}</h3>
-        <p class="beentype">{{coffee.been}}</p>
-        <p class="color">{{coffee.color}}</p>
-        <p class="type">{{coffee.type}}</p>
-        <p class="country">{{coffee.country}}</p>
+<div class="navline">
+    <p class="navline-value">Menu</p>
+    <div class="ellipse"></div>
+    <p class="navline-value">Coffee</p>
+    <div class="ellipse"></div>
+    <p class="navline-value">Whole bean coffee</p>
+    <p class="navline-view">View</p>
+    <img src="../../assets/img/grid2.svg" class="viewimage">
+    <img src="../../assets/img/grid6.svg">
+</div>
+
+<div class="maincontent">
+    <div class="sidebar">
+        <h3 class="headsidebar">Coffee</h3>
+        <div class="category">
+            <div class="headcategory" (click)='showFormat()'>
+                <h3 class="headcategory-name">Format</h3>
+                <div class="plusminus">
+                    <div class="minus"></div>
+                    <div class="plus" *ngIf='!statusFormat'></div>
+                </div>
+            </div>
+            <div class="choosen" *ngIf='statusFormat'>
+                <form class="choosecoffee" *ngFor='let format of formats'>
+                    <input type="checkbox" class="checkbox" [id]="format">
+                    <label [for]="format" class="nameofchoose">
+                        {{ format }}
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="category">
+            <div class="headcategory" (click)='showDegree()'>
+                <h3 class="headcategory-name">Roasting Degree</h3>
+                <div class="plusminus">
+                    <div class="minus"></div>
+                    <div class="plus" *ngIf='!statusDegree'></div>
+                </div>
+            </div>
+            <div class="choosen" *ngIf='statusDegree'>
+                <form class="choosecoffee" *ngFor='let degree of roastingDegrees'>
+                    <input type="checkbox" class="checkbox" [id]="degree">
+                    <label [for]="degree" class="nameofchoose">
+                        {{ degree }}
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="category">
+            <div class="headcategory" (click)='showType()'>
+                <h3 class="headcategory-name">Coffee Type</h3>
+                <div class="plusminus">
+                    <div class="minus"></div>
+                    <div class="plus" *ngIf='!statusType'></div>
+                </div>
+            </div>
+            <div class="choosen" *ngIf='statusType'>
+                <form class="choosecoffee" *ngFor='let type of coffeeType'>
+                    <input type="checkbox" class="checkbox" [id]="type">
+                    <label [for]="type" class="nameofchoose">
+                        {{ type }}
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="category">
+            <div class="headcategory" (click)='showCountry()'>
+                <h3 class="headcategory-name">Producing Country</h3>
+                <div class="plusminus">
+                    <div class="minus"></div>
+                    <div class="plus" *ngIf='!statusCountry'></div>
+                </div>
+            </div>
+            <div class="choosen" *ngIf='statusCountry'>
+                <form class="choosecoffee" *ngFor='let country of producingCountryes'>
+                    <input type="checkbox" class="checkbox" [id]="country">
+                    <label [for]="country" class="nameofchoose">
+                        {{ country }}
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="category">
+            <div class="headcategory" (click)='showOffer()'>
+                <h3 class="headcategory-name">View offers</h3>
+                <div class="plusminus">
+                    <div class="minus"></div>
+                    <div class="plus" *ngIf='!statusOffer'></div>
+                </div>
+            </div>
+            <div class="choosen" *ngIf='statusOffer'>
+                <form class="choosecoffee" *ngFor='let offer of offers'>
+                    <input type="checkbox" class="checkbox" [id]="offer">
+                    <label [for]="offer" class="nameofchoose">
+                        {{ offer }}
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="sidecartcoffee">
+        <div class="cartofcoffe" *ngFor='let coffee of coffees'>
+            <img class="iamgeofcoffee" [src]='coffee.image' [routerLink]="[ '/coffeecart',coffee.id]">
+            <h3 class="nameofcoffee">{{coffee.name}}</h3>
+            <p class="beentype">{{coffee.been}}</p>
+            <p class="color">{{coffee.color}}</p>
+            <p class="type">{{coffee.types}}</p>
+            <p class="country">{{coffee.country}}</p>
+        </div>
     </div>
 </div>
