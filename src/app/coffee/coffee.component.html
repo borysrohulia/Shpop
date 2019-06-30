@@ -104,11 +104,25 @@
     <div class="sidecartcoffee">
         <div class="cartofcoffe" *ngFor='let coffee of coffees'>
             <img class="iamgeofcoffee" [src]='coffee.image' [routerLink]="[ '/coffeecart',coffee.id]">
-            <h3 class="nameofcoffee">{{coffee.name}}</h3>
-            <p class="beentype">{{coffee.been}}</p>
-            <p class="color">{{coffee.color}}</p>
-            <p class="type">{{coffee.types}}</p>
-            <p class="country">{{coffee.country}}</p>
+            <div class="aboutallcoffee"  (mouseenter)='coffee.counterBlock=true' (mouseleave)='coffee.counterBlock=false'>
+                <h3 class="nameofcoffee">{{coffee.name}}</h3>
+                <p class="charcter">● {{coffee.been}}</p>
+                <p class="charcter">● {{coffee.color}}</p>
+                <p class="charcter">● {{coffee.types}}</p>
+                <p class="charcter">● {{coffee.country}}</p>
+                <div class="priceandlike">
+                    <p class="price">{{coffee.price}} <span id="gram">/ 100g</span></p>
+                    <img src="../../assets/img/heartinprice.svg">
+                </div>
+                <div class="dropaddtocart" *ngIf="coffee.counterBlock">
+                    <button class="butt buttofcoffeecart" (click)='plusCart()'>add to cart</button>
+                    <div class="countofgood">
+                        <span id="minuscount" (click)='minusCart()'>-</span>
+                        <p class="countdigit>">1</p>
+                        <span id="pluscount" (click)='plusCart()'>+</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

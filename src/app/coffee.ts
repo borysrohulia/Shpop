@@ -7,4 +7,6 @@ export interface ICoffee {
     types: string,
     country: string,
     price: string,
+    counterGoods: number,
+    counterLike: number
 }

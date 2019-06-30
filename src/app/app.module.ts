@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { CoffeecartComponent } from './coffeecart/coffeecart.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CoffeecartComponent } from './coffeecart/coffeecart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

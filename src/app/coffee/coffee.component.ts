@@ -4,8 +4,7 @@ import { AllcoffeeService } from '../allcoffee.service';
 @Component({
   selector: 'app-coffee',
   templateUrl: './coffee.component.html',
-  styleUrls: ['./coffee.component.scss'],
-  providers: [AllcoffeeService]
+  styleUrls: ['./coffee.component.scss']
 })
 export class CoffeeComponent implements OnInit {
 
@@ -36,31 +35,62 @@ export class CoffeeComponent implements OnInit {
   statusType: boolean = false;
   statusCountry: boolean = false;
   statusOffer: boolean = false;
+  counterBlock: boolean = false;
+
+  subscription;
+  countLike;
+  countCart;
+  id;
   coffees;
 
   constructor(private allCoffee: AllcoffeeService) { }
 
   ngOnInit() {
     this.coffees = this.allCoffee.getCoffees();
+    this.subscription = this.allCoffee.getCountCart().subscribe(
+      (res) => {
+        this.countCart = res.value;
+      });
   }
+  
+      plusLike() {
+        this.allCoffee.setCountLike(this.countLike + 1);
+      }
 
-  showFormat() {
-    this.statusFormat = !this.statusFormat;
-  }
+      minusLike() {
+        this.allCoffee.setCountLike(this.countLike - 1);
+      }
 
-  showDegree() {
-    this.statusDegree = !this.statusDegree;
-  }
+      plusCart() {
+        this.allCoffee.setCountCart(this.countCart + 1);
+      }
 
-  showType() {
-    this.statusType = !this.statusType;
-  }
+      minusCart() {
+        this.allCoffee.setCountCart(this.countCart - 1);
+      }
 
-  showCountry() {
-    this.statusCountry = !this.statusCountry;
-  }
+      showFormat() {
+        this.statusFormat = !this.statusFormat;
+      }
 
-  showOffer() {
-    this.statusOffer = !this.statusOffer;
-  }
+      showDegree() {
+        this.statusDegree = !this.statusDegree;
+      }
+
+      showType() {
+        this.statusType = !this.statusType;
+      }
+
+      showCountry() {
+        this.statusCountry = !this.statusCountry;
+      }
+
+      showOffer() {
+        this.statusOffer = !this.statusOffer;
+      }
+
+      showAddCount() {
+        this.counterBlock = !this.counterBlock;
+      }
+  
 }

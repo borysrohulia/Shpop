@@ -1,10 +1,20 @@
 import { Injectable } from '@angular/core';
 import { ICoffee } from '../app/coffee';
+import { Observable, BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AllcoffeeService {
+
+  private sumLike = { value: 0 };
+  private countLike = new BehaviorSubject(this.sumLike);
+
+  private sumCart = { value: 0 };
+  private countCart = new BehaviorSubject(this.sumCart);
+
+  
   
   getCoffees(): ICoffee[] {
     return [
@@ -17,6 +27,8 @@ export class AllcoffeeService {
       types: 'robusta',
       country: 'brazillllll',
       price: '20$',
+      counterGoods: 0,
+      counterLike: 0
     }, 
     {
       id: 2,
@@ -27,6 +39,8 @@ export class AllcoffeeService {
       types: 'arabica',
       country: 'brazil',
       price: '50$',
+      counterGoods: 0,
+      counterLike: 0
     }, 
 
     {
@@ -38,8 +52,34 @@ export class AllcoffeeService {
       types: 'robusta',
       country: 'brazillllll',
       price: '20$',
+      counterGoods: 0,
+      counterLike: 0
     }
   ];
+  }
+
+  getCountLike() {
+    return this.countLike.asObservable();
+  }
+
+  getCountCart() {
+    return this.countCart.asObservable();
+  }
+
+  setCountLike(val: number): void {
+    this.countLike.next({value: val});
+  }
+
+  setCountCart(val: number): void {
+    this.countCart.next({value: val});
+  }
+
+  resetCountCart(): void {
+    this.countCart.next(this.sumCart);
+  }
+
+  resetCountLike(): void {
+    this.countLike.next(this.sumLike);
   }
 
   constructor() { }
