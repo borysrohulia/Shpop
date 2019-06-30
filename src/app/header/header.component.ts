@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AllcoffeeService } from '../allcoffee.service';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  
+  subscription;
+  currentCount;
   showTea: boolean = false;
   showCoffee: boolean = false;
   showSnack: boolean = false;
@@ -15,6 +18,22 @@ export class HeaderComponent implements OnInit {
   showReviews: boolean = false;
   showLang: boolean = false;
 
+
+  constructor(
+    private cardService: AllcoffeeService
+  ) { }
+
+  ngOnInit() {
+    this.subscription = this.cardService.getCount().subscribe(
+      (res) => {
+        this.currentCount = res.value;
+      },
+      (err) => {
+        console.error(`An error occurred: ${err.message}`);
+      }
+    );
+  }
+  
   showTeaBlock() {
     this.showTea = !this.showTea;
   }
@@ -29,11 +48,6 @@ export class HeaderComponent implements OnInit {
   
   showPresentBlock() {
     this.showPresent = !this.showPresent;
-  }
-
-  constructor() { }
-
-  ngOnInit() {
   }
 
 }

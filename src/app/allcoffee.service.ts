@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { ICoffee } from '../app/coffee';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AllcoffeeService {
+  private initialCount = { value: 0 };
+  private countTracker = new BehaviorSubject(this.initialCount);
+  
+  constructor() { }
   
   getCoffees(): ICoffee[] {
     return [
@@ -41,6 +46,16 @@ export class AllcoffeeService {
     }
   ];
   }
-
-  constructor() { }
+  
+  getCount() {
+    return this.countTracker.asObservable();
+  }
+ 
+  setCount(val: number): void {
+    this.countTracker.next({value: val});
+  }
+ 
+  resetCount(): void {
+    this.countTracker.next(this.initialCount);
+  }
 }
