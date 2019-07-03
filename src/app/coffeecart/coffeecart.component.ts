@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AllcoffeeService } from '../allcoffee.service';
 
 @Component({
   selector: 'app-coffeecart',
@@ -9,9 +8,7 @@ import { AllcoffeeService } from '../allcoffee.service';
 })
 export class CoffeecartComponent implements OnInit, OnDestroy {
   id: number;
-  subscription;
   sub;
-  currentCount;
   coffees: any [] = [
     {
       id: 1,
@@ -47,33 +44,17 @@ export class CoffeecartComponent implements OnInit, OnDestroy {
   ]
   selectedCoffee = {};
 
-  constructor(
-    private route:ActivatedRoute,
-    private cardService: AllcoffeeService
-  ) { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
      this.id = params['id'];
      this.selectedCoffee = this.coffees.find((oneCoffee)=> oneCoffee.id == this.id);
      });
-    
-    this.subscription = this.cardService.getCount().subscribe(
-      (res) => {
-        this.currentCount = res.value;
-      },
-      (err) => {
-        console.error(`An error occurred: ${err.message}`);
-      }
-    );
      console.log(this.id);
    }
 
    ngOnDestroy() {
     this.sub.unsubscribe();
-   }
-   
-   addToShoppingCart() {
-     this.cardService.setCount(this.currentCount + 1);
    }
 }
