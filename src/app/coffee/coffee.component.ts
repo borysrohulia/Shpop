@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AllcoffeeService } from '../allcoffee.service';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-coffee',
@@ -37,28 +38,55 @@ export class CoffeeComponent implements OnInit {
   statusOffer: boolean = false;
   counterBlock: boolean = false;
 
-  subscription;
-  countLike;
-  countCart;
-  id;
-  coffees;
+  subscriptionCart;   // for => countCart
+  subscriptionLike;   // for => countLike
+  countLike;          // value of countLike in real time
+  countCart;          // value of countCart in real time
+  coffees = [];            // array with coffee from service
+
+  subCart;
+  viewCart = [];      // cart with goods in real time in service  
+  modCart;            // help var for send data to service 
 
   constructor(private allCoffee: AllcoffeeService) { }
 
   ngOnInit() {
-    this.coffees = this.allCoffee.getCoffees();
-    this.subscription = this.allCoffee.getCountCart().subscribe(
+    this.coffees = this.allCoffee.getCoffees();     
+    
+    this.subscriptionCart = this.allCoffee.getCountCart().subscribe(
       (res) => {
         this.countCart = res.value;
       });
+
+      this.subscriptionLike = this.allCoffee.getCountLike().subscribe(
+        (res) => {
+          this.countLike = res.value;
+        });
+
+        this.subCart = this.allCoffee.getCart().subscribe(
+          (res) => {
+            this.viewCart = res;
+          }
+        );
   }
+
   
-      plusLike() {
+      addData(item)  {                              //add coffee to cart
+        this.modCart = this.viewCart.push(this.coffees[item-1]);
+        this.allCoffee.addCart(this.modCart);
+      }
+          
+      
+
+  
+      plusLike() {                                  
         this.allCoffee.setCountLike(this.countLike + 1);
       }
 
       minusLike() {
-        this.allCoffee.setCountLike(this.countLike - 1);
+        if(this.countLike > 0) {
+          this.allCoffee.setCountLike(this.countLike - 1);
+        }
       }
 
       plusCart() {
@@ -66,8 +94,13 @@ export class CoffeeComponent implements OnInit {
       }
 
       minusCart() {
-        this.allCoffee.setCountCart(this.countCart - 1);
+        if(this.countCart > 0) {
+          this.allCoffee.setCountCart(this.countCart - 1);
+        }
       }
+
+      // slideConfig = {"slidesToShow": 4, "slidesToScroll": 1};
+      
 
       showFormat() {
         this.statusFormat = !this.statusFormat;

@@ -91,6 +91,9 @@
                 text-align: center;
                 color: #3F3B35;
             }
+            // agm-map {
+            //     height: 300px;
+            // }
         }
         .verticalline {
             width: 16px;
@@ -116,6 +119,22 @@
         }
         .countgoods {
             margin-left: 15px;
+            position: relative;
+            .countOf {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                color: #3F3B35;
+                position: absolute;
+                top: 5px;
+            }
+            #like {
+                left: 27px;
+            }
+            #cart {
+                right: 13px;
+            }
         }
     }
 }
@@ -155,6 +174,8 @@
     }
 }
 
+
+ 
 .menu_content {
     // display: none;
     position: absolute;

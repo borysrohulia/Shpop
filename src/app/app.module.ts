@@ -10,6 +10,9 @@ import { MainComponent } from './main/main.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { CoffeecartComponent } from './coffeecart/coffeecart.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ConverToSpacesPipe } from '../app/convert-to-space.pipe';
+import { UpperCase } from '../app/upper-case.pipe';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HeaderComponent,
     FooterComponent,
     MainComponent,
+    ConverToSpacesPipe,
+    UpperCase,
     CoffeeComponent,
     CoffeecartComponent
   ],
@@ -24,7 +29,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBglJhtz7FrIC_5jxDn-ID7lj0pjkC39fs'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

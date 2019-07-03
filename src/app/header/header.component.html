@@ -23,6 +23,9 @@
     <div class="maphide">
       <img src="../../assets/img/mappoint.svg">
       <p class="authheader_text">Find Your City</p>
+      <!-- <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map> -->
     </div>
     <div class="verticalline"></div>
     <div class="signin">
@@ -32,8 +35,8 @@
     <div class="countgoods">
       <img src="../../assets/img/heart.svg">
       <img src="../../assets/img/shopping-basket.svg">
-      <p class="countOfLikes">{{countLike}}</p>
-      <p class="countOfGoods">{{countCart}}</p>
+      <p class="countOf" id="like">{{countLike}}</p>
+      <p class="countOf" id="cart">{{countCart}}</p>
     </div>
   </div>
 </div>

@@ -126,6 +126,8 @@
         .cartofcoffe {
             display: flex;
             flex-direction: column;
+            margin-right: 15px;
+            margin-bottom: 15px;
             box-shadow: 0px 4px 10px rgba(126, 123, 123, 0.2);
             border-radius: 8px 8px 0px 0px;
             .iamgeofcoffee {
@@ -163,14 +165,21 @@
                         font-style: normal;
                         font-weight: bold;
                         font-size: 14px;
-                        line-height: 17px;
-                       
+                        line-height: 17px; 
                         color: #33402F;
                     }
+                    .like {
+                        background-image: url("../../assets/img/heartinprice.svg");
+                        width:20px;
+                        height: 20px;
+                    }
+                    // .active_like {
+                        
+                    // }
                 }
                 .dropaddtocart {
                     display: flex;
-                    margin-right: 10px;
+                    // margin-right: 10px;
                     // display: none;
                     // justify-content: space-around;
                     // padding-left: 20px;
@@ -216,4 +225,28 @@
     border-image: initial;
 }
 
+.carusel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // text-align: center;
+    margin-left: 410px;
+    width: 1000px;
+}
+
+.slick-next {
+    position: absolute;
+    z-index: 99 !important;
+    &::before {
+        content: url('../../assets/img/next1.svg');
+    }
+}
+
+.slick-prev {
+    position: absolute;
+    z-index: 99 !important;
+    &::before{
+        content: url('../../assets/img/back1.svg');
+    }
+}
 

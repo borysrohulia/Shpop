@@ -8,16 +8,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class AllcoffeeService {
 
-  private sumLike = { value: 0 };
-  private countLike = new BehaviorSubject(this.sumLike);
-
-  private sumCart = { value: 0 };
-  private countCart = new BehaviorSubject(this.sumCart);
-
-  
-  
-  getCoffees(): ICoffee[] {
-    return [
+  arrayCoffee = [
     {
       id: 1,
       image: '../assets/img/coffeecup.png',
@@ -56,6 +47,36 @@ export class AllcoffeeService {
       counterLike: 0
     }
   ];
+
+  private sumLike = { value: 0 };
+  private countLike = new BehaviorSubject(this.sumLike);
+
+  private sumCart = { value: 0 };
+  private countCart = new BehaviorSubject(this.sumCart);
+
+  testCart = [];
+  obsCart = new BehaviorSubject(this.testCart);
+  
+  getCart() {
+    return this.obsCart.asObservable();
+  }
+
+  addCart(item) {
+    this.obsCart.next(item);
+  }
+
+  clearCart() {
+    this.obsCart.next(this.testCart);
+  }
+
+  removeCart(item) {
+    this.testCart = this.testCart.filter(itemDel => {
+      return itemDel.id != item.id
+    });
+  }
+  
+  getCoffees() {
+    return this.arrayCoffee;
   }
 
   getCountLike() {

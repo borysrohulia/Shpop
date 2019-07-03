@@ -15,6 +15,10 @@ $fontMontserat:'Montserrat', sans-serif;
 $fontRaleway: 'Raleway', sans-serif;
 $fontRibeye: 'Ribeye Marrow', cursive;
 
+.countOf {
+    font-family: $fontMontserat;
+}
+
 #search {
     font-family: $fontRaleway;
 }

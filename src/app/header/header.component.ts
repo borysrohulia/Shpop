@@ -1,27 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AllcoffeeService } from '../allcoffee.service';
 
-// https://pastebin.com/zreqb7jG    supervagno!!!!!!!!!!!!!
-
-/* ngOnInit() {
-    this.subscription = this.cardService.getCount().subscribe(
-      (res) => {
-        this.currentCount = res.value;
-      },
-      (err) => {
-        console.error(`An error occurred: ${err.message}`);
-      }
-    );
-    this.warmApi.getSubscriptions().catch(error => {
-      if (error.status === 403) {
-        this.hasNoSubscriptions = true;
-        if (!environment.isApp) $('[data-toggle="tooltip"]').tooltip('show');
-      }
-    });
-  } */ 
-
-  // supervagno!!!!!!!!!!!!!
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -36,7 +15,7 @@ export class HeaderComponent implements OnInit {
   showAbout: boolean = false;
   showReviews: boolean = false;
   showLang: boolean = false;
-  count;
+
   countLike;
   countCart;
   subForLike;
@@ -44,8 +23,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(private allCoffee: AllcoffeeService) { }
 
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+
   ngOnInit() {
-    // this.count = this.allCoffee.getCoffees();
     this.subForLike = this.allCoffee.getCountLike().subscribe(
       (res) => {
         this.countLike = res.value;
